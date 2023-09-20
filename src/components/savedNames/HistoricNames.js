@@ -9,6 +9,7 @@ function HistoricNames(props) {
       itemLayout="horizontal"
       dataSource={names}
       header={<label>Historic Names</label>}
+      // locale={{ emptyText: '' }}
       renderItem={(name) => (
         <List.Item
           actions={[

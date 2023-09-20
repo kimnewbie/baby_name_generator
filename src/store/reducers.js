@@ -10,15 +10,19 @@ const historicNames = (state = [], action) => {
 
 const favouritesReducer = (state = [], action) => {
     if (action.type === "ADD_FAV_NAME") {
-        return state.concat(action.payload);
+        // 중복 제거
+        if (state.find((name) => name.forename === action.payload.forename && name.surname === action.payload.surname)) {
+            return state;
+        } else {
+            return state.concat(action.payload);
+        }
     }
-
     return state;
 }
 
 const initState = {
-    forename: 'Haydn',
-    surname: 'SWE'
+    forename: 'Youjin',
+    surname: 'Kim'
 }
 
 const currentNameReducer = (state = initState, action) => {

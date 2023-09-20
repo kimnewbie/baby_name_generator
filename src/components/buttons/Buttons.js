@@ -3,6 +3,7 @@ import React from "react";
 import EditSurnameButton from "./EditSurnameButton";
 import BabyNameGenerator from "../../services/BabyNameGenerator";
 import AlphabetButtons from "./AlphabetButtons";
+import { PlusOutlined } from '@ant-design/icons';
 
 function Buttons(props) {
   const {
@@ -38,6 +39,7 @@ function Buttons(props) {
           }
         >
           Add to Favourites
+          <PlusOutlined />
         </Button>
       </section>
       <section className="bottom">
