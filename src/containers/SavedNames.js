@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
 import SavedNames from '../components/savedNames';
-import { addToFavourites } from '../store/actions';
+import { addToFavorites } from '../store/actions';
 
 const mapStateToProps = state => ({
   historicNames: state.history,
-  favouriteNames: state.favourites
+  favoriteNames: state.favorites
 });
 
 const mapDispatchToProps = dispatch => ({
-  addToFavs: name => dispatch(addToFavourites(name))
+  addToFavs: name => dispatch(addToFavorites(name))
 });
 
 export default connect(

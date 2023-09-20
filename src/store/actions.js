@@ -2,7 +2,7 @@ const addHistoricName = payload => {
     return { type: 'ADD_HISTORIC_NAME', payload }
 }
 
-const addToFavourites = payload => {
+const addToFavorites = payload => {
     return { type: 'ADD_FAV_NAME', payload }
 }
 
@@ -24,7 +24,7 @@ const setFilterForeNameChar = payload => {
 
 
 export {
-    addToFavourites,
+    addToFavorites,
     addHistoricName,
     setCurrentForename,
     setCurrentSurname,

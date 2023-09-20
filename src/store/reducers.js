@@ -8,7 +8,7 @@ const historicNames = (state = [], action) => {
     return state;
 }
 
-const favouritesReducer = (state = [], action) => {
+const favoritesReducer = (state = [], action) => {
     if (action.type === "ADD_FAV_NAME") {
         // 중복 제거
         if (state.find((name) => name.forename === action.payload.forename && name.surname === action.payload.surname)) {
@@ -52,7 +52,7 @@ const filtersReducer = (state = filtersInitState, action) => {
 
 export default combineReducers({
     history: historicNames,
-    favourites: favouritesReducer,
+    favorites: favoritesReducer,
     currentName: currentNameReducer,
     filters: filtersReducer,
 })

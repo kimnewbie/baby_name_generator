@@ -1,13 +1,13 @@
 import React from 'react'
 import HistoricNames from './HistoricNames'
-import FavouriteNames from './FavouriteNames'
+import FavoriteNames from './FavoriteNames';
 
 function SavedNames(props) {
-  const { favouriteNames, historicNames, addToFavs } = props;
+  const { favoriteNames, historicNames, addToFavs } = props;
   return (
     <section className="saved-names">
       <HistoricNames names={historicNames} addToFavs={addToFavs} />
-      <FavouriteNames names={favouriteNames} />
+      <FavoriteNames names={favoriteNames} />
     </section>
   )
 }

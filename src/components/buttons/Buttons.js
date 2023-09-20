@@ -20,7 +20,6 @@ function Buttons(props) {
 
   const handleBabyNameChange = () => {
     const newName = BabyNameGenerator(isBoyFilter === "BOY", firstCharFilter);
-    console.log(newName);
     setCurrentForename(newName);
     addHistoricName({ forename: newName, surname: currentName.surname });
   };
@@ -38,7 +37,7 @@ function Buttons(props) {
             })
           }
         >
-          Add to Favourites
+          Add to Favorites
           <PlusOutlined />
         </Button>
       </section>

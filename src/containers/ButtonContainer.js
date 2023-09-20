@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Buttons from '../components/buttons';
-import { setCurrentForename, setCurrentSurname, setFilterForeNameChar, setFilterGender, addHistoricName, addToFavourites } from '../store/actions';
+import { setCurrentForename, setCurrentSurname, setFilterForeNameChar, setFilterGender, addHistoricName, addToFavorites } from '../store/actions';
 
 const mapStateToProps = state => ({
   firstCharFilter: state.filters.foreNameChar,
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  addToFavs: name => dispatch(addToFavourites(name)),
+  addToFavs: name => dispatch(addToFavorites(name)),
   addHistoricName: name => dispatch(addHistoricName(name)),
   setCurrentForename: name => dispatch(setCurrentForename(name)),
   setCurrentSurname: name => dispatch(setCurrentSurname(name)),

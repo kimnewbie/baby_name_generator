@@ -1,13 +1,13 @@
 import React from "react";
 import { List } from "antd";
 
-function FavouriteNames(props) {
+function FavoriteNames(props) {
   const { names } = props;
   return (
     <List
       itemLayout="horizontal"
       dataSource={names}
-      header={<label>Favourite Names</label>}
+      header={<label>Favorite Names</label>}
       renderItem={(name) => (
         <List.Item>
           <List.Item.Meta title={name.forename} description={name.surname} />
@@ -17,4 +17,4 @@ function FavouriteNames(props) {
   );
 }
 
-export default FavouriteNames;
+export default FavoriteNames;
