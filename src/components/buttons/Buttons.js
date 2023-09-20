@@ -2,7 +2,6 @@ import { Button, Switch } from "antd";
 import React from "react";
 import EditSurnameButton from "./EditSurnameButton";
 import BabyNameGenerator from "../../services/BabyNameGenerator";
-import "./Buttons.css";
 import AlphabetButtons from "./AlphabetButtons";
 
 function Buttons(props) {

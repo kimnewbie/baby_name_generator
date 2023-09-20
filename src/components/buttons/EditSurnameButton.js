@@ -1,15 +1,14 @@
 import { Button, Input, Modal } from 'antd';
 import React, { useState } from 'react';
 
-function EditSurnameButton (props) {
-  const {setCurrentSurname} = props;
+function EditSurnameButton(props) {
+  const { setCurrentSurname } = props;
 
   const [isVisible, setIsVisible] = useState(false);
   const [inputSurname, setInputSurname] = useState('');
 
   const handleOk = () => {
-    setIsVisible(false)
-    console.log(inputSurname)
+    setIsVisible(false);
     setCurrentSurname(inputSurname);
   }
 
@@ -20,14 +19,14 @@ function EditSurnameButton (props) {
       </Button>
       <Modal
         title="Enter Surname"
-        visible={isVisible}
+        open={isVisible}
         onCancel={() => setIsVisible(false)}
         onOk={handleOk}
       >
-       <Input
-        placeholder="Please enter surname"
-        onChange={e => setInputSurname(e.target.value)}
-      />
+        <Input
+          placeholder="Please enter surname"
+          onChange={e => setInputSurname(e.target.value)}
+        />
       </Modal>
     </section>
   )

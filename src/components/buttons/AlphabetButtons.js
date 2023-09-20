@@ -1,7 +1,6 @@
 import { List, Button } from "antd";
 import React, { useState } from "react";
 
-import "./AlphabetButtons.css";
 const ALPHABET = [
   "A",
   "B",

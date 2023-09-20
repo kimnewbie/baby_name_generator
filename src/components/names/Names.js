@@ -1,5 +1,4 @@
 import React from "react";
-import "./Names.css";
 
 function Names(props) {
   const { forename, surname } = props;

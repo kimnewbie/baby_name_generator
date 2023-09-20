@@ -1,6 +1,6 @@
 import React from "react";
 import { List, Button } from "antd";
-import { HeartOutlined } from "@ant-design/icons";
+import { HeartOutlined, HeartFilled } from "@ant-design/icons";
 
 function HistoricNames(props) {
   const { names, addToFavs } = props;
