@@ -12,7 +12,6 @@ function HistoricNames(props) {
       header={<label>Historic Names</label>}
       // locale={{ emptyText: '' }}
       renderItem={(name, index) => {
-        console.log(name)
         return (
           <List.Item
             actions={[

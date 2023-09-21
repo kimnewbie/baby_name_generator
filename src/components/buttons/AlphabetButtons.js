@@ -47,7 +47,7 @@ function AlphabetButtons(props) {
 
   return (
     <section className="alphabetContainer">
-      <Tooltip placement="left" color='#9ea2e3' title={tableText} arrow defaultOpen>
+      <Tooltip placement="left" color='#9ea2e3' title={tableText} arrow >
         <List
           grid={{ column: 6 }}
           dataSource={ALPHABET}

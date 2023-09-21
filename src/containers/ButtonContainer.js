@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
   setCurrentForename: name => dispatch(setCurrentForename(name)),
   setCurrentSurname: name => dispatch(setCurrentSurname(name)),
   setForeNameFilter: char => dispatch(setFilterForeNameChar(char)),
-  setGenderFilter: gender => dispatch(setFilterGender(gender))
+  setGenderFilter: gender => dispatch(setFilterGender(gender)),
 })
 
 export default connect(

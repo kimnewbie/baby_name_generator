@@ -1,4 +1,4 @@
-import { Button, Input, Modal } from 'antd';
+import { Button, Input, Modal, Tooltip } from 'antd';
 import React, { useState } from 'react';
 
 function EditSurnameButton(props) {
@@ -7,6 +7,8 @@ function EditSurnameButton(props) {
   const [isVisible, setIsVisible] = useState(false);
   const [inputSurname, setInputSurname] = useState('');
 
+  const editSurnameText = '원하는 성 지정'
+
   const handleOk = () => {
     setIsVisible(false);
     setCurrentSurname(inputSurname);
@@ -14,9 +16,11 @@ function EditSurnameButton(props) {
 
   return (
     <section>
-      <Button type="link" size="large" onClick={() => setIsVisible(true)}>
-        Edit Surname
-      </Button>
+      <Tooltip placement="bottom" color='#9ea2e3' title={editSurnameText} arrow >
+        <Button type="link" size="large" onClick={() => setIsVisible(true)}>
+          Edit Surname
+        </Button>
+      </Tooltip>
       <Modal
         title="Enter Surname"
         open={isVisible}

@@ -15,19 +15,15 @@ function App() {
         }
       }}
     >
-      <main>
-        <header>
-          <section className="title">
-            <Emoji text=":baby: Name Generator :baby:" />
-          </section>
-          <NameContainer />
-          <ButtonContainer />
-        </header>
-        <body>
-          <SavedNames />
-        </body>
-      </main>
-    </ ConfigProvider>
+      <header>
+        <section className="title">
+          <Emoji text=":baby: Name Generator :baby:" />
+        </section>
+        <NameContainer />
+        <ButtonContainer />
+      </header>
+      <SavedNames />
+    </ConfigProvider>
   );
 }
 
