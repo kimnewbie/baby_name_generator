@@ -1,31 +1,38 @@
 import { combineReducers } from 'redux';
 
-const historicNames = (state = [], action) => {
-    if (action.type === "ADD_HISTORIC_NAME") {
-        return [action.payload].concat(state).slice(0, 5);
+const reducersInit = {
+    initState: {
+        forename: 'Youjin',
+        surname: 'Kim'
+    },
+    filtersInitState: {
+        isBoy: true,
+        foreNameChar: null
     }
+}
 
-    return state;
+const historicNames = (state = [], action) => {
+    switch (action.type) {
+        case "ADD_HISTORIC_NAME":
+            return [action.payload].concat(state).slice(0, 5);
+        default: return state;
+    }
 }
 
 const favoritesReducer = (state = [], action) => {
-    if (action.type === "ADD_FAV_NAME") {
-        // 중복 제거
-        if (state.find((name) => name.forename === action.payload.forename && name.surname === action.payload.surname)) {
-            return state;
-        } else {
-            return state.concat(action.payload);
-        }
+    switch (action.type) {
+        case "ADD_FAV_NAME":
+            if (state.find((name) => name.forename === action.payload.forename && name.surname === action.payload.surname)) {
+                return state;
+            } else {
+                return state.concat(action.payload);
+            }
+        default: return state;
     }
-    return state;
 }
 
-const initState = {
-    forename: 'Youjin',
-    surname: 'Kim'
-}
 
-const currentNameReducer = (state = initState, action) => {
+const currentNameReducer = (state = reducersInit.initState, action) => {
     if (action.type === "SET_CURRENT_FORENAME") {
         return Object.assign({}, state, { forename: action.payload })
     } else if (action.type === "SET_CURRENT_SURNAME") {
@@ -35,12 +42,7 @@ const currentNameReducer = (state = initState, action) => {
     return state;
 }
 
-const filtersInitState = {
-    isBoy: true,
-    foreNameChar: null
-}
-
-const filtersReducer = (state = filtersInitState, action) => {
+const filtersReducer = (state = reducersInit.filtersInitState, action) => {
     if (action.type === 'SET_GENDER_FILTER') {
         return Object.assign({}, state, { isBoy: action.payload === 'BOY' })
     } else if (action.type === 'SET_FORE_NAME_CHAR') {
