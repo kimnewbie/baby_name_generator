@@ -29,6 +29,17 @@ header .title {
   gap: 20px;
 }
 
+.top button {
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.top button:hover {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
 .bottom {
   display: flex;
   flex-direction: row;
@@ -44,7 +55,7 @@ header .title {
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
 .alphabetButton {
@@ -68,6 +79,12 @@ header .title {
   font-size: 30px;
   padding: 20px;
   font-weight: bold;
+}
+
+.name__section {
+  display: flex;
+  border: 2px dashed var(--logo-color-dark);
+  padding: 10px 40px;
 }
 
 .forename {

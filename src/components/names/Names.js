@@ -5,8 +5,10 @@ function Names(props) {
 
   return (
     <section className="namesContainer">
-      <section className="forename">{forename}</section>
-      <section className="surname">{surname}</section>
+      <div className="name__section">
+        <section className="forename">{forename}</section>
+        <section className="surname">{surname}</section>
+      </div>
     </section>
   );
 }
